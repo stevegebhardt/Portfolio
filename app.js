@@ -29,9 +29,14 @@ $(() => {
   $(".fa-sun").on("click", $regularDisplay);
 
   $(".dropDown").hide();
-  $(".linksDiv").hover(() => {
-    $(".dropDown").toggle();
-  });
+  $(".linksDiv").hover(
+    () => {
+      $(".dropDown").show();
+    },
+    () => {
+      $(".dropDown").hide();
+    }
+  );
 
   $(".interestsLink").on("click", $showInterests);
 
