@@ -77,10 +77,17 @@ ul > li {
   border-radius: 20px;
 }
 .carousel {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  align-items: center;
+  align-content: center;
+  height: 250px;
+  min-width: 100%;
+}
+.images {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  height: 250px;
+  justify-content: center;
 }
 .images img {
   max-height: 250px;
