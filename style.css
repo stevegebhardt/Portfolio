@@ -8,7 +8,8 @@ body {
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
 }
-#header {
+#header,
+#footer {
   background-color: rgba(117, 223, 255, 0.8);
   display: flex;
   height: 60px;
@@ -16,7 +17,16 @@ body {
   justify-content: space-evenly;
   align-items: center;
   font-size: 25px;
+}
+#header {
   align-self: center;
+}
+#footer {
+  margin-bottom: 20px;
+}
+.previous,
+.next {
+  font-size: 200% !important;
 }
 .resumeLink {
   color: black;
@@ -24,6 +34,24 @@ body {
 }
 .resumeLink:hover {
   color: black;
+}
+.email {
+  width: 220px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 1px 1px 2px white;
+  box-shadow: 5px 5px 10px black;
+  position: relative;
+  left: 308px;
+  display: none;
+  z-index: 1;
+  top: -16px;
+}
+.emailP {
+  padding: 9px;
 }
 .button:hover {
   cursor: grab;
@@ -33,15 +61,14 @@ body {
 }
 .bio {
   background-color: rgba(255, 255, 255, 0.9);
-  height: 200px;
+  height: 275px;
   width: 700px;
   top: -20px;
   position: relative;
   border-radius: 10px;
   box-shadow: 5px 5px 10px black;
   font-size: 20px;
-  font-family: "Cormorant Garamond", serif;
-  font-family: "Great Vibes", cursive;
+  font-family: "Rosarivo", serif;
   z-index: 1;
   display: none;
 }
@@ -97,7 +124,7 @@ ul > li {
   background-color: rgba(255, 255, 255, 0.6);
   width: 80%;
   height: 350px;
-  display: none;
+  /* display: none; */
   text-align: center;
   border-radius: 20px;
   margin: auto;
@@ -135,17 +162,6 @@ a:hover,
   color: rgba(45, 175, 222, 0.711);
 }
 
-#footer {
-  background-color: rgba(117, 223, 255, 0.8);
-  display: flex;
-  height: 60px;
-  width: 100%;
-  align-items: center;
-  font-size: 25px;
-  justify-content: space-evenly;
-  margin-bottom: 20px;
-}
-
 .fa-cloud-moon:hover {
   filter: invert(50%);
 }
@@ -154,13 +170,16 @@ a:hover,
 }
 
 @media only screen and (max-width: 600px) {
-  body {
-    display: flex;
+  .bio {
+    max-width: 400px;
+    max-height: 600px;
+    overflow: scroll;
+    top: 1px;
   }
-  #header {
-    background-color: rgba(88, 85, 252, 0.8);
+  .email {
+    left: 70px;
   }
-  #yoursTruly {
-    max-width: 100px;
+  img {
+    max-width: 200px;
   }
 }

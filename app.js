@@ -6,10 +6,11 @@ const $showMyBio = () => {
 };
 
 const $blueLightFilter = () => {
-  $("body").css("filter", "brightness(75%)");
-  $("body").css("backdrop-filter", "brightness(80%)");
-  $("#header").css("background-color", "rgba(117, 175, 175, 0.8)");
-  $("#footer").css("background-color", "rgba(117, 175, 175, 0.8)");
+  $("body").css("filter", "brightness(90%)");
+  $("body").css("backdrop-filter", "brightness(90%)");
+  $("body").css("backdrop-filter", "sepia(35%)");
+  $("#header").css("background-color", "rgba(175, 175, 135, 0.8)");
+  $("#footer").css("background-color", "rgba(175, 175, 135, 0.8)");
   $(".fa-cloud-moon").hide();
   $(".fa-sun").show();
 };
@@ -24,7 +25,12 @@ const $regularDisplay = () => {
 const $dropDown = () => {
   $(".dropDown").css("display", "block");
 };
-
+const $showMyEmail = () => {
+  $(".email").toggle();
+  $(".email").on("mouseleave", () => {
+    $(".email").hide();
+  });
+};
 const $showInterests = () => {
   $(".dropDown").hide();
   $(".interestsSection").show();
@@ -32,6 +38,7 @@ const $showInterests = () => {
 
 $(() => {
   $("#bioTab").on("click", $showMyBio);
+  $("#emailTab").on("click", $showMyEmail);
 
   $(".fa-sun").hide();
   $(".fa-cloud-moon").on("click", $blueLightFilter);
