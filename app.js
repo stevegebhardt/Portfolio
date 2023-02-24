@@ -36,6 +36,23 @@ const $showInterests = () => {
   $(".interestsSection").show();
 };
 
+const $youFoundTheEgg = () => {
+  $("#header").remove();
+  $("#mainSectionTop").remove();
+  $("#mainSectionBottom").remove();
+  $("#footer").remove();
+  $("#EGG").remove();
+  const $eggDiv = $("<div>")
+    .addClass("youWon")
+    .text("Congratulations!!\nYou have found the Egg!!");
+  $("body").css("background-image", "url('https://i.imgur.com/0fa3Wn1.jpeg')");
+  $eggDiv.css("background-color", "rgba(250, 250, 250, 0.7");
+  $eggDiv.css("color", "black");
+  $eggDiv.css("font-size", "100px");
+  $eggDiv.css("border-radius", "20px");
+  $eggDiv.css("text-align", "center");
+  $("body").append($eggDiv);
+};
 $(() => {
   $("#bioTab").on("click", $showMyBio);
   $("#emailTab").on("click", $showMyEmail);
@@ -90,4 +107,6 @@ $(() => {
   $(".interestsSection").on("mouseleave", () => {
     $(".interestsSection").hide();
   });
+
+  $("#EGG").on("dblclick", $youFoundTheEgg);
 });
