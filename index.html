@@ -14,6 +14,12 @@
       src="https://kit.fontawesome.com/351f8e7213.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <script src="app.js"></script>
     <title>Steve Gebhardt</title>
   </head>
@@ -25,17 +31,32 @@
       <h5 class="button" id="emailTab">E-Mail</h5>
     </header>
     <div id="mainSectionTop">
+      <div class="aboutMes">
+        <div class="BIO"></div>
+        <div class="resume"></div>
+        <div class="email"></div>
+      </div>
       <div class="linksDiv">
         About Me:
         <ul class="dropDown">
           <li>
-            <i class="fa-brands fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/steve-gebhardt-dev/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
           </li>
           <li>
-            <i class="fa-brands fa-instagram"></i>
+            <a href="https://www.instagram.com/steve_gebhardt/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
           </li>
           <li>
-            <h4 class="projectsLink">Projects</h4>
+            <a href="https://github.com/stevegebhardt" target="_blank"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+          </li>
+            <a href="https://codepen.io/SteveG81/pen/QWBmMXW" target="_blank"><h4 class="projectsLink">Projects</h4></a>
           </li>
           <li>
             <h4 class="interestsLink">Interests</h4>
@@ -44,7 +65,62 @@
       </div>
     </div>
     <div id="mainSectionBottom">
-      <div class="interestsSection"></div>
+      <div class="interestsSection">
+        <h1>Photography</h1>
+        <div class="carousel">
+          <div class="btn previous">
+            <i class="fa-solid fa-backward-step"></i>
+          </div>
+          <div class="images">
+            <img src="./A Face in the Wall.jpg" alt="Face on a Wall" />
+            <img src="./A Walk Around the Island.jpg" alt="People on a trail" />
+            <img
+              src="./Arc de Triomphe.jpg"
+              alt="The Arc de Triomphe in Paris"
+            />
+            <img src="./Bridge at Peace.jpg" alt="Small Bridge on a Lake" />
+            <img src="./Cali Wildfire.jpg" alt="Wildfire" />
+            <img
+              src="./Chateau Haut Bryon Cellar.jpg"
+              alt="Wine Barrels in a Cellar"
+            />
+            <img
+              src="./Chateau Haut Bryon Fermenters.jpg"
+              alt="Wine Fermenters"
+            />
+            <img src="./Culurgiones.JPG" alt="Handmade culurgiones" />
+            <img src="./Coppa.JPG" alt="Coppa Salumi" />
+            <img src="./Depth of Trees.jpg" alt="Rows of Trees" />
+            <img src="./Facade.jpg" alt="Exterior of Building" />
+            <img
+              src="./Giants Causeway.jpg"
+              alt="Person on the Giants Causeway"
+            />
+            <img
+              src="./Good Food.jpg"
+              alt="Assorted plates of pizza and food"
+            />
+            <img src="./Guanciale.JPG" alt="Guanciale" />
+            <img src="./Les Traboules.jpg" alt="Les Traboules de Vieux Lyon" />
+            <img src="./Northern Ireland.jpg" alt="Northern Ireland Town" />
+            <img src="./Oyster crackers.jpg" alt="Handmade Oyster Crackers" />
+            <img src="./PCH.jpg" alt="Light Trails on the PCH" />
+            <img
+              src="./Santa Monica Pier from Below.jpg"
+              alt="Santa Monica Pier from Below"
+            />
+            <img src="./Santa Monica Pier.jpg" alt="The Santa Monica Pier" />
+            <img src="./Train Tracks.jpg" alt="Train Tracks" />
+            <img
+              src="./Waiting in the Airport.jpg"
+              alt="People Waiting at the Airport"
+            />
+          </div>
+          <div class="btn next">
+            <i class="fa-solid fa-forward-step"></i>
+          </div>
+        </div>
+      </div>
       <div class="bioSection"></div>
       <div class="resumeSection"></div>
     </div>
@@ -52,6 +128,7 @@
       <h5 class="name">Steve Gebhardt</h5>
       <h5 class="est">Est. 2023</h5>
       <i class="fa-solid fa-cloud-moon"></i>
+      <i class="fa-regular fa-sun"></i>
     </footer>
   </body>
 </html>
