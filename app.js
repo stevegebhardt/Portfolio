@@ -1,3 +1,10 @@
+const $showMyBio = () => {
+  $(".bio").toggle();
+  $(".bio").on("mouseleave", () => {
+    $(".bio").hide();
+  });
+};
+
 const $blueLightFilter = () => {
   $("body").css("filter", "brightness(75%)");
   $("body").css("backdrop-filter", "brightness(80%)");
@@ -24,6 +31,8 @@ const $showInterests = () => {
 };
 
 $(() => {
+  $("#bioTab").on("click", $showMyBio);
+
   $(".fa-sun").hide();
   $(".fa-cloud-moon").on("click", $blueLightFilter);
   $(".fa-sun").on("click", $regularDisplay);
