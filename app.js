@@ -46,13 +46,22 @@ const $youFoundTheEgg = () => {
     .addClass("youWon")
     .text("Congratulations!!\nYou have found the Egg!!");
   $("body").css("background-image", "url('https://i.imgur.com/0fa3Wn1.jpeg')");
-  $eggDiv.css("background-color", "rgba(250, 250, 250, 0.7");
-  $eggDiv.css("color", "black");
   $eggDiv.css("font-size", "100px");
   $eggDiv.css("border-radius", "20px");
   $eggDiv.css("text-align", "center");
+  $eggDiv.css("z-index", "1");
+  const $reloadDiv = $("<button>")
+    .text("Home")
+    .attr("class", "reload")
+    .css("height", "20px")
+    .css("width", "80px");
   $("body").append($eggDiv);
+  $("body").append($reloadDiv);
+  $(".reload").on("click", () => {
+    location.reload(true);
+  });
 };
+
 $(() => {
   $("#bioTab").on("click", $showMyBio);
   $("#emailTab").on("click", $showMyEmail);
