@@ -11,7 +11,7 @@ const $blueLightFilter = () => {
   $("body").css("backdrop-filter", "sepia(35%)");
   $("#header").css("background-color", "rgba(175, 175, 135, 0.8)");
   $("#footer").css("background-color", "rgba(175, 175, 135, 0.8)");
-  $(".fa-cloud-moon").hide();
+  $(".fa-eye-low-vision").hide();
   $(".fa-sun").show();
 };
 const $regularDisplay = () => {
@@ -20,7 +20,7 @@ const $regularDisplay = () => {
   $("#header").css("background-color", "rgba(117, 223, 255, 0.8)");
   $("#footer").css("background-color", "rgba(117, 223, 255, 0.8)");
   $(".fa-sun").hide();
-  $(".fa-cloud-moon").show();
+  $(".fa-eye-low-vision").show();
 };
 const $dropDown = () => {
   $(".dropDown").css("display", "block");
@@ -42,10 +42,12 @@ const $youFoundTheEgg = () => {
   $("#mainSectionBottom").remove();
   $("#footer").remove();
   $("#EGG").remove();
+  $("body").css("justify-items", "center");
   const $eggDiv = $("<div>")
     .addClass("youWon")
     .text("Congratulations!!\nYou have found the Egg!!");
   $("body").css("background-image", "url('https://i.imgur.com/0fa3Wn1.jpeg')");
+  $("body").css("background-size", "contain");
   $eggDiv.css("font-size", "100px");
   $eggDiv.css("border-radius", "20px");
   $eggDiv.css("text-align", "center");
@@ -67,7 +69,7 @@ $(() => {
   $("#emailTab").on("click", $showMyEmail);
 
   $(".fa-sun").hide();
-  $(".fa-cloud-moon").on("click", $blueLightFilter);
+  $(".fa-eye-low-vision").on("click", $blueLightFilter);
   $(".fa-sun").on("click", $regularDisplay);
 
   $(".dropDown").hide();
