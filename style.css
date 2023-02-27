@@ -102,6 +102,9 @@ h4 {
   backdrop-filter: blur(10px);
   border-radius: 20px;
 }
+li > a {
+  cursor: context-menu;
+}
 ul > li {
   padding: 5px 0;
 }
