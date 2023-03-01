@@ -123,7 +123,7 @@ ul > li {
   align-items: center;
   background-color: rgba(255, 255, 255, 0.6);
   width: 80%;
-  height: 350px;
+  height: 362px;
   display: none;
   text-align: center;
   border-radius: 20px;
@@ -131,24 +131,29 @@ ul > li {
   box-shadow: 5px 5px 8px black;
   max-width: 700px;
 }
+.interestsSection > h1 {
+  margin: 10px 0 30px;
+  text-shadow: 5px 5px 8px #000;
+}
 .carousel {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   align-items: center;
   align-content: center;
-  height: 250px;
+  height: 255px;
 }
 .images {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 10px;
 }
 .images img {
   max-height: 250px;
-  border: 8px solid rgb(255, 255, 255);
+  border: 8px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  display: none;
   box-shadow: 5px 5px 8px black;
+  display: none;
 }
 .images img:first-of-type {
   display: block;
