@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include('./partials/head.ejs')%>
+    <title>MTG Decks List</title>
+  </head>
+  <body>
+    <h1>All Decks</h1>
+
+    <%for(let i = 0; i < decks.length; i++){%>
+        <ul class="theList">
+            <li class="listElement">
+              <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
+                ><img src="<%=decks[i].img%>" class="deckImg"
+              /></a>
+              <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
+                ><%=decks[i].name%></a>
+    <% } %>
+
+    <button class="button"><a href="/decks/new">Brewing a New Deck?</a></button>
+    <div>
+      <button class="button"><a href="/mtg">Home</a></button>
+    </div>
+  </body>
+</html>

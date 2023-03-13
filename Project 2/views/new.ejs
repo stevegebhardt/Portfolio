@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("./partials/head.ejs")%>
+    <title>MTG Brewer</title>
+  </head>
+  <body>
+    <div>
+      <h1>New Brew</h1>
+    </div>
+    <div>
+      <form action="/mtg" method="POST" class="newForm">
+        <input type="text" name="format" class="input" placeholder="Format" />
+        <input type="text" name="name" class="input" placeholder="Deck Name" />
+        <input
+          type="text"
+          name="archetype"
+          class="input"
+          placeholder="Archetype"
+        />
+        <input type="text" name="img" class="input" placeholder="Image URL" />
+        <input type="text" name="lands" class="input" placeholder="Lands" />
+        <input
+          type="text"
+          name="creatures"
+          class="input"
+          placeholder="Creatures"
+        />
+        <input
+          type="text"
+          name="artifacts"
+          class="input"
+          placeholder="Artifacts"
+        />
+        <input
+          type="text"
+          name="instants"
+          class="input"
+          placeholder="Instants"
+        />
+        <input
+          type="text"
+          name="sorceries"
+          class="input"
+          placeholder="Sorceries"
+        />
+        <input
+          type="text"
+          name="enchantments"
+          class="input"
+          placeholder="Enchantments"
+        />
+        <input type="submit" value="Add New Brew" class="button" />
+      </form>
+    </div>
+  </body>
+</html>
