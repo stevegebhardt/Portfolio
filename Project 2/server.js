@@ -8,12 +8,18 @@ app.use(express.urlencoded({ extended: true }));
 const db = mongoose.connection;
 
 const Mtg = require("./models/deckschema.js");
-
+// const deck = require("./models/deck.js");
 const PORT = 3000;
 app.use(express.static("public"));
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
 });
+
+// app.get("/seed", (req, res) => {
+//   Mtg.create(deck).then((data) => {
+//     res.send(data);
+//   });
+// });
 
 app.get("/mtg", (req, res) => {
   Mtg.find({}).then((allDecks) => {

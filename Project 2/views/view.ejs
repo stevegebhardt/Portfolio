@@ -2,14 +2,117 @@
 <html lang="en">
   <head>
     <%-include('./partials/head.ejs')%>
-    <title><%=deck.name%>></title>
+    <title><%=deck.name%></title>
   </head>
   <body>
-    <h1><%=deck.name%></h1>
+    <h1><%=deck.format%> <%=deck.name%></h1>
 
+    <h3><%=deck.archetype%></h3>
+    <div class="container">
+      <div><%=deck.lands%></div>
+      <div><%=deck.creatures%></div>
+      <div><%=deck.artifacts%></div>
+      <div><%=deck.instants%></div>
+      <div><%=deck.sorceries%></div>
+      <div><%=deck.enchantments%></div>
+    </div>
+    <div class="">
+      Update this deck below:
+      <form action="/mtg/<%=deck._id%>?_method=PUT" method="POST" class="form">
+        Lands: 
+        <%if (deck.lands == null){%> 
+            <input type="text" name="lands" class="input" value="Lands"/>
+        <% } else { %>
+            <%for(let l = 0; l < deck.lands.length + 1; l++){%>
+            <input type="text" name="lands" class="input" value="<%=deck.lands[l]%>" />
+            <% } %> 
+        <% } %>   
+        Creatures: 
+        <%if (deck.creatures == null){%> 
+            <input type="text" name="creatures" class="input" value="Creatures"/>
+        <% } else { %>
+            <%for(let c = 0; c < deck.creatures.length + 1; c++){%>
+                <input
+                type="text"
+                name="creatures"
+                class="input"
+                value="<%=deck.creatures[c]%>"
+                />
+            <% } %> 
+        <% } %>
+        Planeswalkers: 
+        <%if (deck.planeswalkers == null){%> 
+            <input type="text" name="planeswalkers" class="input" value="Planeswalkers"/>
+        <% } else{ %>
+            <%for(let p = 0; p < deck.planeswalkers.length + 1; p++){%> 
+                <input
+                type="text"
+                name="creatures"
+                class="input"
+                value="<%=deck.planeswalkers[p]%>"
+                />
+            <% } %> 
+        <% } %>  
+        Artifacts: 
+        <%if (deck.artifacts == null){%> 
+            <input type="text" name="artifacts" class="input" value="Artifacts"/>
+        <% } else { %>
+            <%for(let a = 0; a < deck.artifacts.length + 1; a++){%>
+                <input
+                type="text"
+                name="artifacts"
+                class="input"
+                value="<%=deck.artifacts[a]%>"
+                />
+            <% } %>
+        <% } %> 
+        Instants: 
+        <%if (deck.instants == null){%> 
+            <input type="text" name="instants" class="input" value="Instants"/>
+        <% } else { %>
+            <%for(let i = 0; i < deck.instants.length + 1; i++){%>
+            <input
+            type="text"
+            name="instants"
+            class="input"
+            value="<%=deck.instants[i]%>"
+            />
+             <% } %> 
+        <% } %>
+        Sorceries: 
+        <%if (deck.sorceries == null){%> 
+            <input type="text" name="instants" class="input" value="Instants"/>
+        <% } else { %>
+            <%for(let s = 0; s < deck.sorceries.length + 1; s++){%>
+                <input
+                type="text"
+                name="sorceries"
+                class="input"
+                value="<%=deck.sorceries[s]%>"
+                />
+            <% } %> 
+        <% } %>
+        Enchantments: 
+        <%if (deck.enchantments == null){%> 
+            <input type="text" name="instants" class="input" value="Instants"/>
+        <% } else { %>
+            <%for(let e = 0; e < deck.enchantments.length + 1;
+            e++){%>
+                <input
+                type="text"
+                name="enchantments"
+                class="input"
+                value="<%=deck.enchantments[e]%>"
+                />
+            <% } %>
+        <% } %>
+      </form>
+    </div>
+
+    <input type="submit" value="Update this Deck" class="button xlg" />
     <form action="/mtg/<%=deck._id%>?_method=DELETE" method="POST" class="form">
-      <input type="submit" value="DELETE" class="button" />
+      <input type="submit" value="DELETE" class="button lrg" />
     </form>
-    <a href="/mtg"><button type="button">Home</button></a>
+    <a href="/mtg"><button type="button sm">Home</button></a>
   </body>
 </html>
