@@ -5,22 +5,24 @@
     <title>MTG Decks List</title>
   </head>
   <body>
-    <h1>My MTG Decks</h1>
-    <div>
-      <ul class="no-list-style-type d-flex">
-      <%for(let i = 0; i < decks.length; i++){%>
-          
-              <li class="d-flex-column tenpx-spacing">
-                <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
-                  ><img src="<%=decks[i].img%>" class="deckImg"
-                /></a>
-                <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
-                  ><%=decks[i].name%></a>
-      <% } %>
+    <div class="body-width d-flex-column" >
+      <h1>My MTG Decks</h1>
+      <div class="d-flex-column" >
+        <ul class="no-list-style-type d-flex no-padding md-width">
+        <%for(let i = 0; i < decks.length; i++){%>
+            
+                <li class="d-flex-column tenpx-spacing">
+                  <a href="/mtg/<%=decks[i]._id%>" class="no-text-decoration plainLink"
+                    ><img src="<%=decks[i].img%>" class=""
+                  /></a>
+                  <a href="/mtg/<%=decks[i]._id%>" class="no-text-decoration plainLink"
+                    ><%=decks[i].format%> <%=decks[i].name%></a>
+        <% } %>
+      </div>
+      <div class="d-flex-column fit-content">
+        <button class="button"><a href="/mtg/new" class="no-text-decoration linkTag">Brewing a New Deck?</a></button>
+        <button class="button"><a href="/mtg" class="no-text-decoration linkTag">Home</a></button>
+      </div>
     </div>
-    <div class="d-flex-column fit-content">
-      <button class="button"><a href="/mtg/new" class="no-text-decoration">Brewing a New Deck?</a></button>
-      <button class="button"><a href="/mtg" class="no-text-decoration">Home</a></button>
-    </div>
-  </body>
+    </body>
 </html>
