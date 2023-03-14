@@ -5,21 +5,22 @@
     <title>MTG Decks List</title>
   </head>
   <body>
-    <h1>All Decks</h1>
-    <ul class="theList">
-    <%for(let i = 0; i < decks.length; i++){%>
-        
-            <li class="listElement">
-              <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
-                ><img src="<%=decks[i].img%>" class="deckImg"
-              /></a>
-              <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
-                ><%=decks[i].name%></a>
-    <% } %>
-
-    <button class="button"><a href="/mtg/new">Brewing a New Deck?</a></button>
+    <h1>My MTG Decks</h1>
     <div>
-      <button class="button"><a href="/mtg">Home</a></button>
+      <ul class="no-list-style-type d-flex">
+      <%for(let i = 0; i < decks.length; i++){%>
+          
+              <li class="d-flex-column tenpx-spacing">
+                <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
+                  ><img src="<%=decks[i].img%>" class="deckImg"
+                /></a>
+                <a href="/mtg/<%=decks[i]._id%>" class="linkTag"
+                  ><%=decks[i].name%></a>
+      <% } %>
+    </div>
+    <div class="d-flex-column fit-content">
+      <button class="button"><a href="/mtg/new" class="no-text-decoration">Brewing a New Deck?</a></button>
+      <button class="button"><a href="/mtg" class="no-text-decoration">Home</a></button>
     </div>
   </body>
 </html>
