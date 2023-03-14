@@ -26,7 +26,7 @@ app.get("/mtg", (req, res) => {
     res.render("index.ejs", {
       decks: allDecks,
     });
-  });
+  })
 });
 
 app.get("/mtg/new", (req, res) => {
@@ -51,6 +51,46 @@ app.get("/mtg/:id/edit", (req, res) => {
 
 app.post("/mtg", (req, res) => {
   Mtg.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/standard", (req, res) => {
+  Standard.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/pioneer", (req, res) => {
+  Pioneer.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/legacy", (req, res) => {
+  Legacy.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/pauper", (req, res) => {
+  Pauper.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/commander", (req, res) => {
+  Commander.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/limited", (req, res) => {
+  Limited.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/cedh", (req, res) => {
+  Cedh.create(req.body).then((createdBudget) => {
+    res.redirect("/mtg");
+  });
+});
+app.post("/modern", (req, res) => {
+  Modern.create(req.body).then((createdBudget) => {
     res.redirect("/mtg");
   });
 });
