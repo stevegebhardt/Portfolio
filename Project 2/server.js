@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 const db = mongoose.connection;
 
 const Mtg = require("./models/deckschema.js");
-const deck = require("./models/deck.js");
+// const deck = require("./models/deck.js");
 const PORT = 3000;
 app.use(express.static("public"));
 app.listen(PORT, () => {
