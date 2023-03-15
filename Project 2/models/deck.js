@@ -3,7 +3,7 @@ module.exports = [
     format: "cEDH",
     name: "Hinata's Golden Crown",
     archetype: "Control/Combo",
-    img: "https://assets.moxfield.net/cards/card-436AO-art_crop.jpg",
+    img: "/images/Hinata.jpeg",
     lands: [
       "Training Center",
       "Volcanic Island",
@@ -55,7 +55,7 @@ module.exports = [
       "Dockside Extortionist",
       "Thassa's Oracle",
     ],
-    planeswalkers: ["Grist, the Hunger Tide", "Teferi, Time Raveler"],
+    planeswalkers: ["Teferi, Time Raveler"],
     artifacts: [
       "Mox Diamond",
       "Mana Vault",

@@ -5,7 +5,12 @@
     <title><%=deck.name%></title>
   </head>
   <body>
-    <div class="body-width d-flex-column">
+    <img
+        class="bannerImage"
+        src="https://2.bp.blogspot.com/-tksLCxR3k7k/Ux8XU0nzwlI/AAAAAAAAACg/GIwMMBiNAic/s1600/Magic_The_Gathering_Logo_Wide.jpg"
+      />
+    </section>
+    <div class="d-flex-column">
       <h1><%=deck.format%> <%=deck.name%></h1>
       <h3><%=deck.archetype%></h3>
       <div class="d-flex-wrap tenpx-spacing lrg-width">
@@ -93,134 +98,122 @@
         <form
           action="/mtg/<%=deck._id%>?_method=PUT"
           method="POST"
-          class="d-flex-wrap"
+          class="d-flex-column"
         >
-          <div class="d-flex-column thin-black-border tenpx-spacing box-shdw">
-            Lands: <%if (deck.lands == null){%>
-            <input
-              type="text"
-              name="lands"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="Lands"
-            />
-            <% } else { %> <%for(let l = 0; l < deck.lands.length; l++){%>
-            <input
-              type="text"
-              name="lands"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="<%=deck.lands[l]%>"
-            />
-            <% } %> <% } %>
+          <div class="d-flex-wrap">
+            <div class="d-flex-column thin-black-border tenpx-spacing box-shdw landDiv">
+              Lands: 
+              <div class="button linkTag nonbutton-button" id="ledit">
+                Add
+              </div>
+              <%for(let l = 0; l < deck.lands.length; l++){%>
+              <input
+                type="text"
+                name="lands"
+                class="fit-content-input thin-black-border bc-lt-gry"
+                value="<%=deck.lands[l]%>"
+              />
+              <% } %>
+            </div>
+            <div class="d-flex-column thin-black-border tenpx-spacing box-shdw creatureDiv">
+              Creatures: 
+              <div class="button linkTag nonbutton-button" id="cedit">
+                Add
+              </div>
+              <%for(let c = 0; c < deck.creatures.length; c++){%>
+              <input
+                type="text"
+                name="creatures"
+                class="fit-content-input thin-black-border bc-lt-gry"
+                value="<%=deck.creatures[c]%>"
+              />
+
+              <% } %>
+            </div>
+            <div class="d-flex-column thin-black-border tenpx-spacing box-shdw pwalkerDiv">
+              Planeswalkers: 
+              <div class="button linkTag nonbutton-button" id="pedit">
+                Add
+              </div>
+              <%for(let p = 0; p < deck.planeswalkers.length;
+              p++){%>
+              <input
+                type="text"
+                name="planeswalkers"
+                class="fit-content-input thin-black-border bc-lt-gry"
+                value="<%=deck.planeswalkers[p]%>"
+              />
+
+              <% } %>
+            </div>
+            <div class="d-flex-column thin-black-border tenpx-spacing box-shdw artifactDiv">
+              Artifacts: 
+              <div class="button linkTag nonbutton-button" id="aedit">
+                Add
+              </div>
+              <%for(let a = 0; a < deck.artifacts.length; a++){%>
+              <input
+                type="text"
+                name="artifacts"
+                class="fit-content-input thin-black-border bc-lt-gry"
+                value="<%=deck.artifacts[a]%>"
+              />
+
+              <% } %>
+            </div>
+            <div class="d-flex-column thin-black-border tenpx-spacing box-shdw instantDiv">
+              Instants: 
+              <div class="button linkTag nonbutton-button" id="iedit">
+                Add
+              </div>
+              <%for(let i = 0; i < deck.instants.length; i++){%>
+              <input
+                type="text"
+                name="instants"
+                class="fit-content-input thin-black-border bc-lt-gry"
+                value="<%=deck.instants[i]%>"
+              />
+
+              <% } %>
+            </div>
+            <div class="d-flex-column thin-black-border tenpx-spacing box-shdw sorceryDiv">
+              Sorceries: 
+              <div class="button linkTag nonbutton-button" id="sedit">
+                Add
+              </div>
+              <%for(let s = 0; s < deck.sorceries.length; s++){%>
+              <input
+                type="text"
+                name="sorceries"
+                class="fit-content-input thin-black-border bc-lt-gry"
+                value="<%=deck.sorceries[s]%>"
+              />
+
+              <% } %>
+            </div>
+            <div class="d-flex-column thin-black-border tenpx-spacing box-shdw enchantDiv">
+              Enchantments: 
+              <div class="button linkTag nonbutton-button" id="eedit">
+                Add
+              </div>
+              <%for(let e = 0; e < deck.enchantments.length; e++){%>
+              <input
+                type="text"
+                name="enchantments"
+                class="fit-content-input thin-black-border bc-lt-gry"
+                value="<%=deck.enchantments[e]%>"
+              />
+
+              <% } %>
+            </div>
           </div>
-          <div class="d-flex-column thin-black-border tenpx-spacing box-shdw">
-            Creatures: <%if (deck.creatures == null){%>
+          <div>
             <input
-              type="text"
-              name="creatures"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="Creatures"
+              type="submit"
+              value="Update this Deck"
+              class="button linkTag"
             />
-            <% } else { %> <%for(let c = 0; c < deck.creatures.length; c++){%>
-            <input
-              type="text"
-              name="creatures"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="<%=deck.creatures[c]%>"
-            />
-            <% } %> <% } %>
           </div>
-          <div class="d-flex-column thin-black-border tenpx-spacing box-shdw">
-            Planeswalkers: <%if (deck.planeswalkers == null){%>
-            <input
-              type="text"
-              name="planeswalkers"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="Planeswalkers"
-            />
-            <% } else{ %> <%for(let p = 0; p < deck.planeswalkers.length;
-            p++){%>
-            <input
-              type="text"
-              name="creatures"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="<%=deck.planeswalkers[p]%>"
-            />
-            <% } %> <% } %>
-          </div>
-          <div class="d-flex-column thin-black-border tenpx-spacing box-shdw">
-            Artifacts: <%if (deck.artifacts == null){%>
-            <input
-              type="text"
-              name="artifacts"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="Artifacts"
-            />
-            <% } else { %> <%for(let a = 0; a < deck.artifacts.length; a++){%>
-            <input
-              type="text"
-              name="artifacts"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="<%=deck.artifacts[a]%>"
-            />
-            <% } %> <% } %>
-          </div>
-          <div class="d-flex-column thin-black-border tenpx-spacing box-shdw">
-            Instants: <%if (deck.instants == null){%>
-            <input
-              type="text"
-              name="instants"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="Instants"
-            />
-            <% } else { %> <%for(let i = 0; i < deck.instants.length; i++){%>
-            <input
-              type="text"
-              name="instants"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="<%=deck.instants[i]%>"
-            />
-            <% } %> <% } %>
-          </div>
-          <div class="d-flex-column thin-black-border tenpx-spacing box-shdw">
-            Sorceries: <%if (deck.sorceries == null){%>
-            <input
-              type="text"
-              name="instants"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="Instants"
-            />
-            <% } else { %> <%for(let s = 0; s < deck.sorceries.length; s++){%>
-            <input
-              type="text"
-              name="sorceries"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="<%=deck.sorceries[s]%>"
-            />
-            <% } %> <% } %>
-          </div>
-          <div class="d-flex-column thin-black-border tenpx-spacing box-shdw">
-            Enchantments: <%if (deck.enchantments == null){%>
-            <input
-              type="text"
-              name="instants"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="Instants"
-            />
-            <% } else { %> <%for(let e = 0; e < deck.enchantments.length;
-            e++){%>
-            <input
-              type="text"
-              name="enchantments"
-              class="fit-content-input thin-black-border bc-lt-gry"
-              value="<%=deck.enchantments[e]%>"
-            />
-            <% } %> <% } %>
-          </div>
-          <input
-            type="submit"
-            value="Update this Deck"
-            class="button xlg linkTag"
-          />
         </form>
       </div>
       <div class="d-flex-column">
@@ -231,8 +224,7 @@
         >
           <input type="submit" value="DELETE" class="button lrg linkTag" />
         </form>
-        <button type="button" class="button sm">
-          <a href="/mtg" class="no-text-decoration linkTag">Home</a>
+        <a href="/mtg" ><button type="button" class=" button no-text-decoration linkTag">Home</button></a>
         </button>
       </div>
     </div>
