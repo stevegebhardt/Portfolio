@@ -122,7 +122,7 @@ const addSEdit = () => {
   $(".sorceryDiv").append($sorceryEdit);
 };
 const addEEdit = () => {
-  $(".enchantDiv").append($enchantEdit);
+  $enchantEdit.appendTo($(".enchantDiv"));
 };
 
 $(() => {
