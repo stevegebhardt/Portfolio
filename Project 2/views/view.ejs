@@ -103,7 +103,7 @@
               class="fit-content-input thin-black-border bc-lt-gry"
               value="Lands"
             />
-            <% } else { %> <%for(let l = 0; l < deck.lands.length + 1; l++){%>
+            <% } else { %> <%for(let l = 0; l < deck.lands.length; l++){%>
             <input
               type="text"
               name="lands"
@@ -120,8 +120,7 @@
               class="fit-content-input thin-black-border bc-lt-gry"
               value="Creatures"
             />
-            <% } else { %> <%for(let c = 0; c < deck.creatures.length + 1;
-            c++){%>
+            <% } else { %> <%for(let c = 0; c < deck.creatures.length; c++){%>
             <input
               type="text"
               name="creatures"
@@ -138,7 +137,7 @@
               class="fit-content-input thin-black-border bc-lt-gry"
               value="Planeswalkers"
             />
-            <% } else{ %> <%for(let p = 0; p < deck.planeswalkers.length + 1;
+            <% } else{ %> <%for(let p = 0; p < deck.planeswalkers.length;
             p++){%>
             <input
               type="text"
@@ -156,8 +155,7 @@
               class="fit-content-input thin-black-border bc-lt-gry"
               value="Artifacts"
             />
-            <% } else { %> <%for(let a = 0; a < deck.artifacts.length + 1;
-            a++){%>
+            <% } else { %> <%for(let a = 0; a < deck.artifacts.length; a++){%>
             <input
               type="text"
               name="artifacts"
@@ -174,8 +172,7 @@
               class="fit-content-input thin-black-border bc-lt-gry"
               value="Instants"
             />
-            <% } else { %> <%for(let i = 0; i < deck.instants.length + 1;
-            i++){%>
+            <% } else { %> <%for(let i = 0; i < deck.instants.length; i++){%>
             <input
               type="text"
               name="instants"
@@ -192,8 +189,7 @@
               class="fit-content-input thin-black-border bc-lt-gry"
               value="Instants"
             />
-            <% } else { %> <%for(let s = 0; s < deck.sorceries.length + 1;
-            s++){%>
+            <% } else { %> <%for(let s = 0; s < deck.sorceries.length; s++){%>
             <input
               type="text"
               name="sorceries"
@@ -210,7 +206,7 @@
               class="fit-content-input thin-black-border bc-lt-gry"
               value="Instants"
             />
-            <% } else { %> <%for(let e = 0; e < deck.enchantments.length + 1;
+            <% } else { %> <%for(let e = 0; e < deck.enchantments.length;
             e++){%>
             <input
               type="text"
@@ -220,15 +216,14 @@
             />
             <% } %> <% } %>
           </div>
+          <input
+            type="submit"
+            value="Update this Deck"
+            class="button xlg linkTag"
+          />
         </form>
       </div>
       <div class="d-flex-column">
-        <input
-          type="submit"
-          value="Update this Deck"
-          class="button xlg linkTag"
-        />
-
         <form
           action="/mtg/<%=deck._id%>?_method=DELETE"
           method="POST"

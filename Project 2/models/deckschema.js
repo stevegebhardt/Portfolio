@@ -7,7 +7,7 @@ const deckSchema = new mongoose.Schema({
   img: String,
   lands: [{ type: String }],
   creatures: [{ type: String }],
-  planeswalkers: ["Wrenn and Six x2"],
+  planeswalkers: [{ type: String }],
   artifacts: [{ type: String }],
   instants: [{ type: String }],
   sorceries: [{ type: String }],
