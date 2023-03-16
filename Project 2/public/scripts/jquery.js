@@ -5,48 +5,6 @@ const $landInput = $("<input>")
   .attr("placeholder", "Land")
   .attr("reduired", "required");
 
-const $creatureInput = $("<input>")
-  .attr("type", "text")
-  .attr("name", "creatures")
-  .attr("class", "input")
-  .attr("placeholder", "Creature")
-  .attr("reduired", "required");
-
-const $pwalkerInput = $("<input>")
-  .attr("type", "text")
-  .attr("name", "planeswalkers")
-  .attr("class", "input")
-  .attr("placeholder", "Planeswalker")
-  .attr("reduired", "required");
-
-const $artifactInput = $("<input>")
-  .attr("type", "text")
-  .attr("name", "artifacts")
-  .attr("class", "input")
-  .attr("placeholder", "Artifact")
-  .attr("reduired", "required");
-
-const $instantInput = $("<input>")
-  .attr("type", "text")
-  .attr("name", "instants")
-  .attr("class", "input")
-  .attr("placeholder", "Instant")
-  .attr("reduired", "required");
-
-const $sorceryInput = $("<input>")
-  .attr("type", "text")
-  .attr("name", "sorceries")
-  .attr("class", "input")
-  .attr("placeholder", "Sorcery")
-  .attr("reduired", "required");
-
-const $enchantInput = $("<input>")
-  .attr("type", "text")
-  .attr("name", "enchantments")
-  .attr("class", "input")
-  .attr("placeholder", "Enchantment")
-  .attr("reduired", "required");
-
 const $landEdit = $("<input>")
   .attr("type", "text")
   .attr("name", "lands")
