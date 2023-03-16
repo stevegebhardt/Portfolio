@@ -33,6 +33,34 @@ app.get("/mtg/new", (req, res) => {
   res.render("new.ejs");
 });
 
+app.get("/mtg/game_rules", (req, res) => {
+  res.render("game-rules.ejs");
+});
+app.get("/mtg/std", (req, res) => {
+  res.render("std.ejs");
+});
+app.get("/mtg/vintage", (req, res) => {
+  res.render("vintage.ejs");
+});
+app.get("/mtg/pauper", (req, res) => {
+  res.render("pauper.ejs");
+});
+app.get("/mtg/limited", (req, res) => {
+  res.render("limited.ejs");
+});
+app.get("/mtg/commander", (req, res) => {
+  res.render("commander.ejs");
+});
+app.get("/mtg/cEDH", (req, res) => {
+  res.render("cEDH.ejs");
+});
+app.get("/mtg/modern", (req, res) => {
+  res.render("modern.ejs");
+});
+app.get("/mtg/pioneer", (req, res) => {
+  res.render("pioneer.ejs");
+});
+
 app.get("/mtg/:id", (req, res) => {
   Mtg.findById(req.params.id).then((foundDeck) => {
     res.render("view.ejs", {
