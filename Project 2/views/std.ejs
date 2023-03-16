@@ -6,6 +6,55 @@
   </head>
   <body>
     <%-include("./partials/rulesBanner.ejs")%>
-    <%-include("./partials/footer.ejs")%>
+    <div class="d-flex-column overflow-y">
+      <img src="/images/zendikar_art.jpeg" class="art bannerImageBottom" />
+      <div class="relative d-flex-column lrg-width">
+        <h1 class="text-shadow bord-bottom lrg-text">Standard Play Rules</h1>
+        <p>
+          Standard games are one-on-one with a 60 card minimum for the main deck
+          (up to 15 card sideboard). Winner is determined either by best of one,
+          or best of three games. Standard games should last on average 20
+          minutes for a game.
+        </p>
+        <p>
+          With the exception of basic lands (Plains, Island, Swamp, Mountain,
+          Forest, and Wastes), your combined deck and sideboard may not contain
+          more than four of any individual card, counted by its English card
+          title equivalent. This format includes powerful cards and strategies
+          from the last two decades of Magic.
+        </p>
+        <p>
+          Standard is a dynamic format where you build decks and play using
+          cards in your collection from recently released Magic sets. Evolving
+          gameplay and fresh strategies make it one of the most fun and popular
+          ways to play Magic.
+        </p>
+        <h4>How does the set rotation work?</h4>
+        <p>
+          Each year, new Magic sets are released and added to Standard. Once per
+          year, when the fall set releases, the four oldest sets in Standard
+          rotate out.
+        </p>
+        <p class="tenpx-spacing">
+          As of Feb, 2023, the legal sets are:
+          <ul class="no-list-style-type d-flex-column">
+            <li>Phyrexia: All Will be One</li>
+            <li>The Brother's War</li>
+            <li>Dominaria United</li>
+            <li>Streets of New Capenna</li>
+            <li>Kamigawa: Neon Dynasty</li>
+            <li>Innistrad: Crimson Vow</li>
+            <li>Innistrad: Midnight Hunt</li>
+          </ul>
+        </p>
+        <a
+          href="https://magic.wizards.com/en/banned-restricted-list"
+          target="_blank"
+          class="no-text-decoration plainLink linkTag tenpx-spacing"
+          >Click to see Magics Banned & Restricted List</a
+        >
+        <footer class="footer"><%-include('./partials/footer.ejs')%></footer>
+      </div>
+    </div>
   </body>
 </html>

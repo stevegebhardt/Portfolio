@@ -6,6 +6,92 @@
   </head>
   <body>
     <%-include("./partials/rulesBanner.ejs")%>
-    <%-include("./partials/footer.ejs")%>
+    <div class="d-flex-column overflow-y">
+      <img src="/images/zendikar_art.jpeg" class="art bannerImageBottom" />
+      <div class="relative d-flex-column lrg-width">
+        <h1 class="text-shadow bord-bottom lrg-text">Limited Play Rules</h1>
+        <div class="rules d-flex-column">
+          <p>
+            Limited formats are so-called because they require players to build
+            their decks from a more limited pool of cards than Constructed
+            formats. Limited formats require players to open a specified number
+            of Magic products, they then must work exclusively with the cards
+            that came from that product. Due to the nature of Limited formats,
+            players cannot build their decks in advance of the tournament and
+            must build their deck within the tournament itself.
+          </p>
+          <p>The three sanctioned Limited formats are:</p>
+          <ul class="no-list-style-type d-flex-column">
+            <li>
+              Sealed deck
+              <p>
+                in Sealed Deck tournaments, each player receives six booster
+                packs to build "the best 40-card deck they can". Depending on
+                which sets are to be used in a sealed deck event, the
+                distribution of packs can vary greatly. For example, a Magic
+                2010 sealed deck event consists of six Magic 2010 boosters, but
+                a sanctioned Shards of Alara block sealed deck event consists of
+                two Shards of Alara, two Conflux, and two Alara Reborn booster
+                packs.
+              </p>
+            </li>
+            <li>
+              Booster MagicTheGathering_ManaColours_DrakutethMawofFlames
+              <p>
+                in a booster draft, several players (usually eight) are seated
+                around a table and each player is given three booster packs.
+                Each player opens a pack, selects a card from it and passes the
+                remaining cards to their left. Each player then selects one of
+                the remaining cards from the pack that was just passed to them,
+                and passes the remaining cards to the left again. This continues
+                until all of the cards are depleted. The process is repeated
+                with the second and third packs, except that the cards are
+                passed to the right in the second pack. Players then build decks
+                out of any cards that they selected during the drafting and add
+                as many basic lands as they choose. Each deck built this way
+                must have a minimum of 40 cards, including basic lands.
+              </p>
+            </li>
+            <li>
+              Rochester draft
+              <p>
+                a booster draft variant that was commonly used as a format in
+                Pro Tour and Grand Prix. Although it is still a sanctioned
+                format, the format "at a competitive level is remarkably rare".
+                In 2018, Wizards of the Coast ran the Silver Showcase which was
+                an invite-only Rochester Draft held before the 25th Anniversary
+                Pro Tour. The format differs from traditional booster draft in
+                that packs are opened one at a time and are laid out for each
+                player to see. Players openly pick one card from the pack in
+                turn. Once each player has picked a card from the booster pack,
+                the draft order reverses so that the last player to draft a card
+                from the pack takes the next draft pick and then passes the pack
+                back the way it came. Once each player has opened a booster and
+                followed this process, the final player to open a booster opens
+                their next booster and the draft pick order is reversed. The
+                process is repeated until each player has opened three booster
+                packs each and all the cards in those packs have been drafted.
+              </p>
+            </li>
+          </ul>
+          <p>
+            Decks must contain a minimum of 40 cards. There must be no more than
+            4 copies of an individual card. Any drafted or opened card not used
+            in the main board function as the players sideboard.
+          </p>
+        </div>
+        <p class="tenpx-spacing">
+          Cards from all regular core sets and expansions since Eight Edition
+          are legal.
+        </p>
+        <a
+          href="https://magic.wizards.com/en/banned-restricted-list"
+          target="_blank"
+          class="no-text-decoration plainLink linkTag tenpx-spacing"
+          >Click to see Magics Banned & Restricted List</a
+        >
+        <footer class="footer"><%-include('./partials/footer.ejs')%></footer>
+      </div>
+    </div>
   </body>
 </html>

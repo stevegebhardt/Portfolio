@@ -1,7 +1,7 @@
 module.exports = [
   {
     format: "cEDH",
-    name: "Hinata's Golden Crown",
+    name: "Hinata's Crown",
     archetype: "Control/Combo",
     img: "/images/Hinata.jpeg",
     lands: [
@@ -39,7 +39,7 @@ module.exports = [
       "Command Tower",
     ],
     creatures: [
-      "Hinata, Dawn-Crowned",
+      "Hinata, Dawn-Crowned * CMDR",
       "Drannith Magistrate",
       "Sanctum Prelate",
       "Gilded Drake",

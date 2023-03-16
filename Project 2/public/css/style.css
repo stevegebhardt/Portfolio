@@ -1,3 +1,6 @@
+body {
+  max-height: 100vh;
+}
 .body-width {
   width: 100px;
 }
@@ -8,6 +11,9 @@
   --clr-red: #ff0000;
   --clr-ltgrey: #e0e0e0;
   --clr-grey: #9e9e9e;
+}
+.vh {
+  height: 98vh;
 }
 .no-list-style-type {
   list-style-type: none;
@@ -60,6 +66,9 @@
 .no-spacing {
   margin: 0;
 }
+.soft-corners {
+  border-radius: 3px;
+}
 .no-text-decoration {
   text-decoration: none;
   color: var(--clr-blk);
@@ -78,6 +87,9 @@
 .lrg-width {
   width: 765px;
 }
+.mlrg-width {
+  width: 650px;
+}
 .md-width {
   width: 500px;
 }
@@ -93,6 +105,9 @@
 .box-shdw {
   box-shadow: 3px 3px 3px var(--clr-blk);
 }
+.sm-box-shdw {
+  box-shadow: 1px 1px 1px var(--clr-blk);
+}
 .sm {
   width: 50px;
   object-fit: contain;
@@ -107,9 +122,7 @@
 .no-padding {
   padding: 0;
 }
-.text-wrap {
-  /* overflow-wrap: normal; */
-}
+
 .deckImg {
   height: 125px;
   width: 160px;
@@ -117,6 +130,9 @@
   border-radius: 3px;
   border: 1px solid var(--clr-blk);
   box-shadow: 1px 1px 1px var(--clr-blk);
+}
+.deckImg:hover {
+  opacity: 0.7;
 }
 .margin-two {
   margin: 2px;
@@ -154,6 +170,34 @@ input {
     transparent 95%
   );
   border-radius: 3px;
+}
+.bannerImageBottom {
+  width: 100%;
+  height: 100px;
+  object-position: top;
+  object-fit: cover;
+  mask-image: linear-gradient(to top, var(--clr-white) 25%, transparent 99%);
+  -webkit-mask-image: linear-gradient(
+    to top,
+    var(--clr-white) 25%,
+    transparent 99%
+  );
+  border-radius: 3px;
+  -webkit-filter: grayscale(50%);
+}
+.bannerImageBottomVert {
+  width: 100%;
+  height: 100%;
+  object-position: top;
+  object-fit: cover;
+  mask-image: linear-gradient(to top, var(--clr-white) 25%, transparent 99%);
+  -webkit-mask-image: linear-gradient(
+    to top,
+    var(--clr-white) 25%,
+    transparent 99%
+  );
+  border-radius: 3px;
+  -webkit-filter: grayscale(50%);
 }
 .lrg-text {
   font-size: 50px;
@@ -204,4 +248,46 @@ nav.navigation > ul > li > a:hover::after {
 }
 .mg-top {
   margin-top: 3px;
+}
+.overlflow-y {
+  overflow-y: scroll;
+}
+.art {
+  opacity: 0.3;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
+}
+.wrapper {
+  margin: auto;
+  width: fit-content;
+  height: auto;
+  position: relative;
+}
+.footer {
+  width: 125%;
+}
+.mgn-rt {
+  margin-right: 10px;
+}
+.modal-ish {
+  width: 125%;
+  height: 700px;
+  overflow-y: scroll;
+  border: 1px solid var(--clr-blk);
+  box-shadow: 6px 6px 6px var(--clr-blk);
+  margin-bottom: 20px;
+}
+.relative {
+  position: relative;
+}
+.rules {
+  height: 500px;
+  overflow-y: scroll;
+}
+.pln-bkgrnd {
+  background-image: linear-gradient(to top, #000000, #00000000);
+}
+.wh-bkgrnd {
+  background-color: #f5f5f5;
 }

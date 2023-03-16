@@ -6,6 +6,35 @@
   </head>
   <body>
     <%-include("./partials/rulesBanner.ejs")%>
-    <%-include("./partials/footer.ejs")%>
+    <div class="d-flex-column overflow-y">
+      <img src="/images/zendikar_art.jpeg" class="art bannerImageBottom" />
+      <div class="relative d-flex-column lrg-width">
+        <h1 class="text-shadow bord-bottom lrg-text">Modern Play Rules</h1>
+        <p>
+          These are one-on-one games with 60 card minimums for the main deck
+          plus a sideboard of up to 15 cards. Modern games should last on
+          average 20 minutes for a game.
+        </p>
+        <p>
+          With the exception of basic lands (Plains, Island, Swamp, Mountain,
+          Forest, and Wastes), your combined deck and sideboard may not contain
+          more than four of any individual card, counted by its English card
+          title equivalent. This format includes powerful cards and strategies
+          from the last two decades of Magic.
+        </p>
+        <p class="tenpx-spacing">
+          Cards from all regular core sets and expansions since Eight Edition
+          are legal.
+        </p>
+        <a
+          href="https://magic.wizards.com/en/banned-restricted-list"
+          target="_blank"
+          class="no-text-decoration plainLink linkTag tenpx-spacing"
+          >Click to see Magics Banned & Restricted List</a
+        >
+
+        <footer class="footer"><%-include('./partials/footer.ejs')%></footer>
+      </div>
+    </div>
   </body>
 </html>

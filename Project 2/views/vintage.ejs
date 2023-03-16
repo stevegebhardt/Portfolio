@@ -6,6 +6,32 @@
   </head>
   <body>
     <%-include("./partials/rulesBanner.ejs")%>
-    <%-include("./partials/footer.ejs")%>
+    <div class="d-flex-column overflow-y">
+      <img src="/images/zendikar_art.jpeg" class="art bannerImageBottom" />
+      <div class="relative d-flex-column lrg-width">
+        <h1 class="text-shadow bord-bottom lrg-text">Vintage Play Rules</h1>
+        <p>
+          These are one-on-one games with 60 card minimums for the main deck
+          plus a sideboard of up to 15 cards.
+        </p>
+        <p>
+          This format allows for cards to be played from all Magic card sets and
+          includes cards from expansions and special sets (with the exception of
+          cards on the banned list)! This format holds a restricted list which
+          limits the use of a card to a single copy allowed either in the
+          sideboard or in the main deck. Vintage is a constructed format does
+          not allow your combined deck and sideboard to contain more than four
+          of any individual card.
+        </p>
+
+        <a
+          href="https://magic.wizards.com/en/banned-restricted-list"
+          target="_blank"
+          class="no-text-decoration plainLink linkTag tenpx-spacing"
+          >Click to see Magics Banned & Restricted List</a
+        >
+        <footer class="footer"><%-include('./partials/footer.ejs')%></footer>
+      </div>
+    </div>
   </body>
 </html>

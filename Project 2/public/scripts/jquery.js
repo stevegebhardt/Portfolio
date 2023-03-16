@@ -53,69 +53,47 @@ const $landEdit = $("<input>")
   .attr("class", "fit-content-input thin-black-border bc-lt-gry")
   .attr("placeholder", "Land")
   .attr("reduired", "required");
-const $creatureEdit = $("<input>")
-  .attr("type", "text")
-  .attr("name", "creatures")
-  .attr("class", "fit-content-input thin-black-border bc-lt-gry")
-  .attr("placeholder", "Creature")
-  .attr("reduired", "required");
-const $pwalkerEdit = $("<input>")
-  .attr("type", "text")
-  .attr("name", "planeswalkers")
-  .attr("class", "fit-content-input thin-black-border bc-lt-gry")
-  .attr("placeholder", "Planeswalker")
-  .attr("reduired", "required");
-const $artifactEdit = $("<input>")
-  .attr("type", "text")
-  .attr("name", "artifacts")
-  .attr("class", "fit-content-input thin-black-border bc-lt-gry")
-  .attr("placeholder", "Artifact")
-  .attr("reduired", "required");
-const $instantEdit = $("<input>")
-  .attr("type", "text")
-  .attr("name", "instants")
-  .attr("class", "fit-content-input thin-black-border bc-lt-gry")
-  .attr("placeholder", "Instant")
-  .attr("reduired", "required");
-const $sorceryEdit = $("<input>")
-  .attr("type", "text")
-  .attr("name", "sorceries")
-  .attr("class", "fit-content-input thin-black-border bc-lt-gry")
-  .attr("placeholder", "Sorcery")
-  .attr("reduired", "required");
-const $enchantEdit = $("<input>")
-  .attr("type", "text")
-  .attr("name", "enchantments")
-  .attr("class", "fit-content-input thin-black-border bc-lt-gry")
-  .attr("placeholder", "Enchantment")
-  .attr("reduired", "required");
 
 const addLInput = () => {
-  $(".landDiv").append($landInput);
+  $(".landDiv").append(
+    "<li class='no-list-style-type'><input type='text' name='lands' class='input' placeholder='Land'><a href='javascript:void(0);' class='remove'>&times;</a></li>"
+  );
 };
 
 const addCInput = () => {
-  $(".creatureDiv").append($creatureInput);
+  $(".creatureDiv").append(
+    "<li class='no-list-style-type'><input type='text' name='creatures' class='input' placeholder='Creature'><a href='javascript:void(0);' class='remove'>&times;</a></li>"
+  );
 };
 
 const addPInput = () => {
-  $(".pwalkerDiv").append($pwalkerInput);
+  $(".pwalkerDiv").append(
+    "<li class='no-list-style-type'><input type='text' name='planeswalkers' class='input' placeholder='Planeswalker'><a href='javascript:void(0);' class='remove'>&times;</a></li>"
+  );
 };
 
 const addAInput = () => {
-  $(".artifactDiv").append($artifactInput);
+  $(".artifactDiv").append(
+    "<li class='no-list-style-type'><input type='text' name='artifacts' class='input' placeholder='Artifact'><a href='javascript:void(0);' class='remove'>&times;</a></li>"
+  );
 };
 
 const addIInput = () => {
-  $(".instantDiv").append($instantInput);
+  $(".instantDiv").append(
+    "<li class='no-list-style-type'><input type='text' name='instants' class='input' placeholder='Instant'><a href='javascript:void(0);' class='remove'>&times;</a></li>"
+  );
 };
 
 const addSInput = () => {
-  $(".sorceryDiv").append($sorceryInput);
+  $(".sorceryDiv").append(
+    "<li class='no-list-style-type'><input type='text' name='sorceries' class='input' placeholder='Sorcery'><a href='javascript:void(0);' class='remove'>&times;</a></li>"
+  );
 };
 
 const addEInput = () => {
-  $(".enchantDiv").append($enchantInput);
+  $(".enchantDiv").append(
+    "<li class='no-list-style-type'><input type='text' name='enchantments' class='input' placeholder='Enchantment'><a href='javascript:void(0);' class='remove'>&times;</a></li>"
+  );
 };
 const addLEdit = () => {
   $(".landDiv").append(

@@ -6,6 +6,39 @@
   </head>
   <body>
     <%-include("./partials/rulesBanner.ejs")%>
-    <%-include("./partials/footer.ejs")%>
+    <div class="d-flex-column overflow-y">
+      <img src="/images/zendikar_art.jpeg" class="art bannerImageBottom" />
+      <div class="relative d-flex-column lrg-width">
+        <h1 class="text-shadow bord-bottom lrg-text">Pauper Play Rules</h1>
+        <p>
+          These are one-on-one games with 60 card minimums for the main deck
+          plus a sideboard of up to 15 cards. A deck may not contain more than 4
+          of any individual card, excluding basic lands.
+        </p>
+        <p>
+          Build decks using cards that are readily available! In this Magic
+          format, all cards must have been released at common rarity in a
+          Magic set or product. Common promo cards are only legal if the card
+          meets that qualification.
+        </p>
+        <p>
+          If a common version of a particular card was ever released in a Magic:
+          The Gathering paper product or Magic: The Gathering Online, any
+          version of that card is legal in this format. This includes land cards
+          that were printed with both a common set symbol and the L rarity code.
+        </p>
+        <p class="tenpx-spacing">
+          Cards from all regular core sets and expansions since Eight Edition
+          are legal.
+        </p>
+        <a
+          href="https://magic.wizards.com/en/banned-restricted-list"
+          target="_blank"
+          class="no-text-decoration plainLink linkTag tenpx-spacing"
+          >Click to see Magics Banned & Restricted List</a
+        >
+        <footer class="footer"><%-include('./partials/footer.ejs')%></footer>
+      </div>
+    </div>
   </body>
 </html>

@@ -22,11 +22,13 @@ app.listen(PORT, () => {
 // });
 
 app.get("/mtg", (req, res) => {
-  Mtg.find({}).then((allDecks) => {
-    res.render("index.ejs", {
-      decks: allDecks,
+  Mtg.find({})
+    .sort({ format: 1 })
+    .then((allDecks) => {
+      res.render("index.ejs", {
+        decks: allDecks,
+      });
     });
-  });
 });
 
 app.get("/mtg/new", (req, res) => {

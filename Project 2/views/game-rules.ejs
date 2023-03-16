@@ -6,6 +6,14 @@
   </head>
   <body>
     <%-include("./partials/rulesBanner.ejs")%>
-    <%-include("./partials/footer.ejs")%>
+    <div class="d-flex-column overflow-y">
+      <img src="/images/zendikar_art.jpeg" class="art bannerImageBottom" />
+      <div class="wrapper d-flex-column">
+        <iframe src="/pdfs/MagicCompRules.pdf" class="modal-ish soft-corners"
+          >/</iframe
+        >
+        <footer class="footer"><%-include('./partials/footer.ejs')%></footer>
+      </div>
+    </div>
   </body>
 </html>

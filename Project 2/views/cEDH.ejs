@@ -6,6 +6,37 @@
   </head>
   <body>
     <%-include("./partials/rulesBanner.ejs")%>
-    <%-include("./partials/footer.ejs")%>
+    <div class="d-flex-column overflow-y">
+      <img src="/images/zendikar_art.jpeg" class="art bannerImageBottom" />
+      <div class="relative d-flex-column lrg-width">
+        <h1 class="text-shadow bord-bottom lrg-text">cEDH Play Rules</h1>
+        <p>
+          CEDH is the official abbreviation for the Competitive Elder Dragon
+          Highlander MTG format. The CEDH game mode is a fan favorite, to say
+          the least. The format isn't much different than other modes, just with
+          a focus on the Elder Dragon Highlander cards and playing very
+          competitively in person and online.
+        </p>
+        <h4>What's the Diference between cEDH and Commander?</h4>
+        <p>
+          cEDH and Commander (a.k.a. EDH (Elder Dragon Highlander)) are two peas
+          in a pod. One did exist before the other, sure, but they are both in
+          essence the same exact game, mode, and format. They are both best
+          played with 2-3 players (or more) and share the same turn order (as
+          well as using the same theme decks and Commander cards).
+        </p>
+        <p class="tenpx-spacing">
+          Cards from all regular core sets and expansions since Eight Edition
+          are legal.
+        </p>
+        <a
+          href="https://magic.wizards.com/en/banned-restricted-list"
+          target="_blank"
+          class="no-text-decoration plainLink linkTag tenpx-spacing"
+          >Click to see Magics Banned & Restricted List</a
+        >
+        <footer class="footer"><%-include('./partials/footer.ejs')%></footer>
+      </div>
+    </div>
   </body>
 </html>
