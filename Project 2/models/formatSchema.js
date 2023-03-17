@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Mtg = require("./deckschema");
+const Mtg = require("./deckschema.js");
 
 const formatSchema = new mongoose.Schema({
   format: String,

@@ -9,6 +9,7 @@ const db = mongoose.connection;
 
 const Mtg = require("./models/deckschema.js");
 const Format = require("./models/formatSchema.js");
+const { findOneAndUpdate } = require("./models/formatSchema.js");
 // const deck = require("./models/deck.js");
 // const format = require("./models/format.js");
 const PORT = 3000;
@@ -75,29 +76,38 @@ app.get("/mtg/pioneer_rules", (req, res) => {
 
 app.get("/mtg/:id", (req, res) => {
   Mtg.findById(req.params.id).then((foundDeck) => {
-    res.render("view.ejs", {
-      deck: foundDeck,
+    Format.find({ "formats._id": req.params.is }).then((foundFormat) => {
+      res.render("view.ejs", {
+        format: foundFormat,
+        deck: foundDeck,
+      });
     });
   });
 });
 
 app.get("/mtg/:id/edit", (req, res) => {
   Mtg.findById(req.params.id).then((foundDeck) => {
-    res.render(edit.ejs, {
-      deck: foundDeck,
+    Format.find({}).then((foundFormats) => {
+      Format.findOne({ "mtgs._id": req.params.id }).then((foundDeckFormat) => {
+        res.render("edit.ejs", {
+          deck: foundDeck,
+          format: foundFormats,
+          deckFormat: foundDeckFormat,
+        });
+      });
     });
   });
 });
 
 app.post("/mtg", (req, res) => {
-  Format.findById(req.body.formatId).then((foundFormat) = {
+  Format.findById(req.body.formatId).then((foundFormat) => {
     Mtg.create(req.body).then((createdDeck) => {
       foundFormat.decks.push(createdDeck);
       foundFormat.save().then((data) => {
-        res.redirect('/mtg');
-      })
-    })
-  })
+        res.redirect("/mtg");
+      });
+    });
+  });
 });
 
 app.delete("/mtg/:id", (req, res) => {
@@ -106,10 +116,31 @@ app.delete("/mtg/:id", (req, res) => {
   });
 });
 
-app.put("/mtg/:id", (req, res) => {
-  Mtg.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
-    (updatedDeck) => {
+app.delete("/:id", (req, res) => {
+  Format.findByIdAndRemove(req.params.id).then((foundFormat) => {
+    const mtgsId = [];
+    for (let i = 0; i < foundFormat.mtgs.length; i++) {
+      mtgsId.push(foundFormat.mtgs[i]._id);
+    }
+    Mtg.findOneAndRemove({ _id: { $in: mtgsId } }).then(() => {
       res.redirect("/mtg");
+    });
+  });
+});
+
+app.put("/mtg/:id", (req, res) => {
+  Mtg.findByIdAndUpdate(
+    req.params.id,
+    req.body,
+    { new: true },
+    (err, updatedMtg) => {
+      Format.findOne({ "mtgs._id": req.params.id }, (err, foundFormat) => {
+        foundFormat.mtgs.id(req.params.id).deleteOne();
+        foundFormat.mtgs.push(updatedMtg);
+        foundFormat.save((err, data) => {
+          res.redirect("/mtg" + req.params.id);
+        });
+      });
     }
   );
 });
