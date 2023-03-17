@@ -16,6 +16,7 @@ body {
   --clr-ltgrey: #e0e0e0;
   --clr-grey: #9e9e9e;
   --drk-grey: #4f4f4f;
+  --lt-blue: #2260af;
 }
 .vh {
   height: 98vh;
@@ -53,6 +54,8 @@ body {
 }
 .button:hover {
   background-color: var(--clr-blk);
+  border-color: var(--clr-ltgrey);
+  transition: 0.3s;
 }
 .fit-content {
   width: fit-content;
@@ -155,7 +158,7 @@ body {
   display: flex;
   justify-content: center;
   border-style: outset;
-  border-color: buttonborder;
+  border-color: var(--clr-blk);
   border-image: initial;
   font-size: small;
 }
@@ -194,7 +197,6 @@ input {
 }
 .bannerImageBottomVert {
   width: 100%;
-  height: 100%;
   object-position: top;
   object-fit: cover;
   mask-image: linear-gradient(to top, var(--clr-white) 25%, transparent 99%);
@@ -205,6 +207,12 @@ input {
   );
   border-radius: 3px;
   -webkit-filter: grayscale(50%);
+}
+.art {
+  opacity: 0.3;
+  position: absolute;
+  height: 100%;
+  object-fit: cover;
 }
 .lrg-text {
   font-size: 50px;
@@ -222,7 +230,7 @@ input {
   align-self: center;
 }
 .navigation {
-  background-color: #2260af;
+  background-color: var(--lt-blue);
   height: 50px;
   border: 2px solid var(--clr-blk);
   align-content: center;
@@ -259,12 +267,7 @@ nav.navigation > ul > li > a:hover::after {
 .overlflow-y {
   overflow-y: scroll;
 }
-.art {
-  opacity: 0.3;
-  position: absolute;
-  height: 100%;
-  object-fit: cover;
-}
+
 .wrapper {
   margin: auto;
   width: fit-content;
@@ -296,7 +299,7 @@ nav.navigation > ul > li > a:hover::after {
   background-image: linear-gradient(to top, var(--clr-blk), #00000000);
 }
 .wh-bkgrnd {
-  background-color: var(--clr-ltgrey);
+  background-color: var(--lt-blue);
 }
 ::-webkit-scrollbar {
   width: 12px;
@@ -343,4 +346,8 @@ h4:after {
 .cards:before,
 .cards:after {
   content: "----";
+}
+.remove {
+  color: var(--clr-red);
+  text-decoration: none;
 }

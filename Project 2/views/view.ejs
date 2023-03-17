@@ -17,7 +17,9 @@
         <div class="d-flex-wrap tenpx-spacing lrg-width">
           <%if (deck.lands == ""){%> <% } else { %>
           <div class="d-flex-column thin-black-border tenpx-spacing box-shdw wh-bkgrnd">
-            Lands
+            <div class="white">
+              Lands
+            </div>
             <div class="list-wrap tenpx-spacing">
               <%for(let l = 0; l < deck.lands.length; l++) {%>
               <p class="margin-two thin-black-border bc-lt-gry sm-box-shdw">
@@ -28,7 +30,9 @@
           </div>
           <% } %> <%if (deck.creatures == ""){%> <% } else { %>
           <div class="d-flex-column thin-black-border tenpx-spacing box-shdw wh-bkgrnd">
-            Creatures
+            <div class="white">
+             Creatures
+             </div>
             <div class="list-wrap tenpx-spacing">
               <%for(let c = 0; c < deck.creatures.length; c++) {%>
               <p class="margin-two thin-black-border bc-lt-gry sm-box-shdw">
@@ -39,7 +43,9 @@
           </div>
           <% } %> <%if (deck.planeswalkers == ""){%> <% } else { %>
           <div class="d-flex-column thin-black-border tenpx-spacing box-shdw wh-bkgrnd">
-            Planeswalkers
+            <div class="white">
+              Planeswalkers
+            </div>
             <div class="list-wrap tenpx-spacing">
               <%for(let p = 0; p < deck.planeswalkers.length; p++) {%>
               <p class="margin-two thin-black-border bc-lt-gry sm-box-shdw">
@@ -50,7 +56,9 @@
           </div>
           <% } %> <%if (deck.artifacts == ""){%> <% } else { %>
           <div class="d-flex-column thin-black-border tenpx-spacing box-shdw wh-bkgrnd">
-            Artifacts
+            <div class="white">
+              Artifacts
+            </div>
             <div class="list-wrap tenpx-spacing">
               <%for(let a = 0; a < deck.artifacts.length; a++) {%>
               <p class="margin-two thin-black-border bc-lt-gry sm-box-shdw">
@@ -61,7 +69,9 @@
           </div>
           <% } %> <%if (deck.instants == ""){%> <% } else { %>
           <div class="d-flex-column thin-black-border tenpx-spacing box-shdw wh-bkgrnd">
-            Instants
+            <div class="white">
+              Instants
+            </div>
             <div class="list-wrap tenpx-spacing">
               <%for(let i = 0; i < deck.instants.length; i++) {%>
               <p class="margin-two thin-black-border bc-lt-gry sm-box-shdw">
@@ -72,7 +82,9 @@
           </div>
           <% } %> <%if (deck.sorceries == ""){%> <% } else { %>
           <div class="d-flex-column thin-black-border tenpx-spacing box-shdw wh-bkgrnd">
-            Sorceries
+            <div class="white">
+              Sorceries
+            </div>
             <div class="list-wrap tenpx-spacing">
               <%for(let s = 0; s < deck.sorceries.length; s++) {%>
               <p class="margin-two thin-black-border bc-lt-gry sm-box-shdw">
@@ -83,7 +95,9 @@
           </div>
           <% } %> <%if (deck.enchantments == ""){%> <% } else { %>
           <div class="d-flex-column thin-black-border tenpx-spacing box-shdw wh-bkgrnd">
-            Enchantments
+            <div class="white">
+              Enchantments
+            </div>
             <div class="list-wrap tenpx-spacing">
               <%for(let e = 0; e < deck.enchantments.length; e++) {%>
               <p class="margin-two thin-black-border bc-lt-gry sm-box-shdw">
@@ -102,8 +116,10 @@
             class="d-flex-column"
           >
             <div class="d-flex-wrap">
-              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw landDiv sm-width wh-bkgrnd">
-                Lands: 
+              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw landDiv sm-width wh-bkgrnd soft-corners">
+                <div class="white">  
+                  Lands: 
+                </div>
                 <div class="button linkTag nonbutton-button" id="ledit">
                   Add
                 </div>
@@ -116,8 +132,10 @@
                 />
                 <% } %>
               </div>
-              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw creatureDiv sm-width wh-bkgrnd">
-                Creatures: 
+              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw creatureDiv sm-width wh-bkgrnd soft-corners">
+                <div class="white">
+                  Creatures: 
+                </div>
                 <div class="button linkTag nonbutton-button" id="cedit">
                   Add
                 </div>
@@ -131,8 +149,10 @@
 
                 <% } %>
               </div>
-              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw pwalkerDiv sm-width wh-bkgrnd">
-                Planeswalkers: 
+              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw pwalkerDiv sm-width wh-bkgrnd soft-corners">
+                <div class="white">
+                  Planeswalkers: 
+                </div>
                 <div class="button linkTag nonbutton-button" id="pedit">
                   Add
                 </div>
@@ -147,8 +167,10 @@
 
                 <% } %>
               </div>
-              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw artifactDiv sm-width wh-bkgrnd">
-                Artifacts: 
+              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw artifactDiv sm-width wh-bkgrnd soft-corners">
+                <div class="white">
+                  Artifacts: 
+                </div>
                 <div class="button linkTag nonbutton-button" id="aedit">
                   Add
                 </div>
@@ -162,8 +184,10 @@
 
                 <% } %>
               </div>
-              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw instantDiv sm-width wh-bkgrnd">
-                Instants: 
+              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw instantDiv sm-width wh-bkgrnd soft-corners">
+                <div class="white">
+                  Instants: 
+                </div>
                 <div class="button linkTag nonbutton-button" id="iedit">
                   Add
                 </div>
@@ -177,8 +201,10 @@
 
                 <% } %>
               </div>
-              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw sorceryDiv sm-width wh-bkgrnd">
-                Sorceries: 
+              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw sorceryDiv sm-width wh-bkgrnd soft-corners">
+                <div class="white">
+                  Sorceries: 
+                </div>
                 <div class="button linkTag nonbutton-button" id="sedit">
                   Add
                 </div>
@@ -192,8 +218,10 @@
 
                 <% } %>
               </div>
-              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw enchantDiv sm-width wh-bkgrnd">
-                Enchantments: 
+              <div class="d-flex-column thin-black-border tenpx-spacing box-shdw enchantDiv sm-width wh-bkgrnd soft-corners">
+                <div class="white">
+                  Enchantments: 
+                </div>
                 <div class="button linkTag nonbutton-button" id="eedit">
                   Add
                 </div>
