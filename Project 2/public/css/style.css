@@ -129,11 +129,14 @@ body {
   width: 160px;
   object-fit: cover;
   border-radius: 3px;
-  border: 1px solid var(--clr-blk);
-  box-shadow: 1px 1px 1px var(--clr-blk);
+  border: 2px solid var(--clr-blk);
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px var(--drk-grey);
 }
 .deckImg:hover {
   opacity: 0.7;
+  transition: 0.8s;
+  border: none;
 }
 .margin-two {
   margin: 2px;
