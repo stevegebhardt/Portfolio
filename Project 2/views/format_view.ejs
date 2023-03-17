@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("./partials/head.ejs")%>
+    <title>MTG Formats</title>
+  </head>
+  <body>
+    <img
+      class="bannerImage"
+      src="https://2.bp.blogspot.com/-tksLCxR3k7k/Ux8XU0nzwlI/AAAAAAAAACg/GIwMMBiNAic/s1600/Magic_The_Gathering_Logo_Wide.jpg"
+    />
+    <section>
+      <div class="d-flex-column pln-bkgrnd">
+        <div class="wrapper d-flex-column">
+            <h1 class="text-shadow bord-bottom lrg-text" >Formats</h1>
+            <div class="d-flex-column" >
+            <ul class="no-list-style-type d-flex no-padding lrg-width">
+                <%for(let i = 0; i < formats.length; i++) {%>
+                <li class="d-flex-column tenpx-spacing li-width">
+                    <%=formats[i].format%>
+                </li>
+                <% } %>
+        </div>
+      </div>
+    </section>
+    <%-include("./partials/footer.ejs")%>
+  </body>
+</html>
