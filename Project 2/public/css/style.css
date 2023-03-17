@@ -1,3 +1,7 @@
+* {
+  font-family: "Bona Nova", serif;
+}
+
 body {
   max-height: 100vh;
 }
@@ -123,7 +127,6 @@ body {
 .no-padding {
   padding: 0;
 }
-
 .deckImg {
   height: 125px;
   width: 160px;
@@ -324,4 +327,20 @@ nav.navigation > ul > li > a:hover::after {
   display: block;
   background-color: var(--clr-red);
   transition: 0.5s;
+}
+a.hover,
+.button:hover {
+  cursor: pointer;
+}
+h4:after {
+  content: "";
+  width: 0;
+  height: 2px;
+  width: 100%;
+  display: block;
+  background-color: var(--clr-blk);
+}
+.cards:before,
+.cards:after {
+  content: "----";
 }
