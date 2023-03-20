@@ -32,9 +32,6 @@ body {
 .vh {
   height: 98vh;
 }
-.no-list-style-type {
-  list-style-type: none;
-}
 
 /* =================================== */
 /* Display Formats */
@@ -173,6 +170,9 @@ body {
 .remove {
   color: var(--sld-red);
   text-decoration: none;
+}
+.no-list-style-type {
+  list-style-type: none;
 }
 /*================================ */
 
